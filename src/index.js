@@ -3,11 +3,38 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { CssBaseline } from '@mui/material';
+
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+        background: {
+            default: '#656565'
+        }
+    },
+    components: {
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                border: '3px solid #c596d4'
+                }
+            }
+        }
+    }
+    
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <ThemeProvider theme={theme} >
+            <CssBaseline />
+            <App />
+        </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
