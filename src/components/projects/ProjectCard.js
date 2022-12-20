@@ -1,48 +1,64 @@
 import React, { useState } from 'react'
 import { Box, Card, Typography, CardMedia, CardContent } from '@mui/material'
 import CastModal from './CastModal'
+import LinksModal from './LinksModal'
 
 
-const ProjectCard = ({image, cast, side, title, description, deployedUrl, frontUrl, backUrl}) => {
+const ProjectCard = ({image, cast, side, title, description, links}) => {
 
-    const [open, setOpen] = useState(false)
+    const [openCastModal, setOpenCastModal] = useState(false)
+    const [openLinksModal, setOpenLinksModal] = useState(false)
 
     const leftMargin = side === 'left' ? '2em' : '15%'
 
-    const handleClose = () => {
-        setOpen(false)
+    const handleCloseCastModal = () => {
+        setOpenCastModal(false)
     }
 
-    const handleModalOpen = () => {
-        setOpen(true)
+    const handleCloseLinksModal = () => {
+        setOpenLinksModal(false)
+    }
+
+    const handleOpenCastModal = () => {
+        setOpenCastModal(true)
+    }
+
+    const handleOpenLinksModal = () => {
+        setOpenLinksModal(true)
     }
 
     const projectCardStyle = {
-        width: '80%',
+        width: '85%',
         display:'flex',
         mb: 5,
         ml: leftMargin,
     }
 
+    const titleStyle = {
+        '&:hover': {
+            cursor: 'pointer'
+        },
+        textDecoration: 'underline'
+    }
+
     const imageStyle = {
         '&:hover': {
             cursor: 'pointer',
-            boxShadow: '5px 5px #444444',
             transform: 'translate(-2%, -2%)'
 
         },
         height: '90%',
         width: '90%',
-        borderRadius: '30px'
+        objectFit:'scale-down'
     }
 
     const cardContent = 
         <Box sx={{width: '75%'}} >
             <CardContent sx={{ flex: '1 0 auto', width: '90%'}}>
-                <Typography variant='h3'>
+                <Typography variant='h3' sx={titleStyle} onClick={handleOpenLinksModal}>
                     {title}
                 </Typography>
-                <Typography variant = 'h6' align ='justify'>
+                <Typography variant = 'subtitle1' align ='justify'>
                     {description}
                 </Typography>
             </CardContent>
@@ -54,7 +70,7 @@ const ProjectCard = ({image, cast, side, title, description, deployedUrl, frontU
                 component='img'
                 image={image}
                 sx={imageStyle}
-                onClick={handleModalOpen}
+                onClick={handleOpenCastModal}
             />
         </Box>
 
@@ -73,7 +89,8 @@ const ProjectCard = ({image, cast, side, title, description, deployedUrl, frontU
                 cardImage
             }
         </Card>
-        <CastModal cast={cast} open={open} handleClose={handleClose} />
+        <CastModal cast={cast} open={openCastModal} handleClose={handleCloseCastModal} />
+        <LinksModal links={links} open={openLinksModal} handleClose={handleCloseLinksModal} />
      </div>
     )
 }

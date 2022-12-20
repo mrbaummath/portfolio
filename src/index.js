@@ -20,7 +20,7 @@ const theme = createTheme({
                 root: {
                 border: '3px solid #c596d4'
                 }
-            }
+            },
         }
     }
     

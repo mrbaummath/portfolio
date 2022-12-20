@@ -1,9 +1,9 @@
 export const aboutMe = 'I am a reformed lawyer and former math teacher who now works in back-end development. I abstract processes, datasets, problems, and other project elements into workable representations so that they can be meaningfully worked on. From my days as an educator I will always carry with me the joy of learning how others work on the tasks in front of them so that I can continually learn new approaches to complex problems.'
 
-export const statDescription = 'Stat Descrption'
+export const statDescription = 'I wrote this full-stack app with Express, Mongo, and Liquid-Express. Stat-Generator is a tool for statistics teachers to create samples to be used in class. Users specify parameters for the underlying distribution and the app then calls to RANDOM.org for raw data to process into a usable sample. Teachers can sample from Gaussian or Binomial Distributions. For samples from a noraml distribution, users can interactively edit the shape of their sample distribution using histograms built with the Desmos API.'
 
-export const badgesDescription = 'Badges Description'
+export const badgesDescription = 'My team and I wrote this MERN application as a to-do app with social media features. I wrote models and API on the backend and constructed many of the corresonding API calls on the client side. As our repo manager, I reviewed and merged all pull requests and handled separation of concerns/workflow.'
 
-export const checkersDescription = 'Checkers Description'
+export const checkersDescription = 'A fully functional checkers app I wrote with HTML, CSS, and Javascript'
 
-export const graderDescription = 'Grader description'
+export const graderDescription = 'Grader is a streamlined grading application I created for use by teachers and students. I wrote the backend in Python using Django and the Django REST framework. For the client application, I used React along with the Material\'s React component library. Teachers create classes and assignments then grade assignments directly within a Material Data-Grid. Students join class sections with unique codes and can view graded assignments.'
