@@ -22,7 +22,7 @@ const Navbar = () => {
                 indicatorColor='secondary'
                 aria-label='navigation tabs'
             >
-                <Tab value='home' label='Home/About Me/Contact' onClick={()=>{navigate('/')}} />
+                <Tab value='home' label='About Me' onClick={()=>{navigate('/')}} />
                 <Tab value='projects' label='Dev Projects' onClick={()=>{navigate('projects')}} />
                 <Tab value='resume' label='Resume' onClick={()=>{navigate('resume')}}/>
 
