@@ -25,6 +25,7 @@ const Navbar = () => {
                 <Tab value='home' label='About Me' onClick={()=>{navigate('/')}} />
                 <Tab value='projects' label='Dev Projects' onClick={()=>{navigate('projects')}} />
                 <Tab value='resume' label='Resume' onClick={()=>{navigate('resume')}}/>
+                <Tab value='hobbies' label='Hobbies/Side Projects' onClick={()=>{navigate('hobbies')}} />
 
 
 

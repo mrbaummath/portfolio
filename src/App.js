@@ -8,12 +8,11 @@ import Resume from './components/Resume/Resume';
 
 import logo from './logo.svg';
 import './App.css';
+import Hobbies from './components/hobbies/Hobbies';
 
 
 
 function App() {
-
-    
 
     return (
     <Fragment>
@@ -32,10 +31,14 @@ function App() {
                 path='/resume'
                 element={<Resume />}
             />
+            <Route
+                path='/hobbies'
+                element={<Hobbies />}
+            />
         </Routes>
             
     </Fragment>
     )
 }
 
-export default App;
+export default App

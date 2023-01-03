@@ -19,7 +19,7 @@ const LinksModal = ({links, open, handleClose}) => {
 
     const linksJSX = links.map(link => (
         <ListItem>
-            <Link href={link.href}>
+            <Link href={link.href} target="_blank">
                 {link.title}
             </Link>
         </ListItem>
