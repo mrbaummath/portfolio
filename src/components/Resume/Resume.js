@@ -40,6 +40,9 @@ const Resume = (props) => {
             case 'css':
                 setPopoverContent(cssSkills)
                 break
+            case 'sql':
+                setPopoverContent(SQLSkills)
+                break
             case 'ga':
                 setPopoverContent(gaDescription)
                 break
@@ -67,6 +70,7 @@ const Resume = (props) => {
     const jsSkills = {text: 'Node || Express || Mongoose || Liquid Express || React', credit: '(Icon by Icon 54)'}
     const htmlSkills = {text:'', credit:'(Icon by Icon Mafia)'}
     const cssSkills = {text:'', credit:'(Icon by Icon Mafia)'}
+    const SQLSkills = {text:'', credit: '(Icon by Ravindra Kalkani on Icon Scout)'}
     const gaDescription = {text:'General Assembly || Software Engineering Immersive Program || December, 2022', credit:''}
     const tcDescription = {text: 'Teachers College at Columbia University || MA, Math Education || February, 2015', credit:''}
     const nyuDescription = {text: 'NYU School of Law || J.D. || May, 2012', credit:''}
@@ -95,12 +99,13 @@ const Resume = (props) => {
             
                       
                 
-            <Grid item sm={4}>
-                <ImageList cols={4} sx={{height:100}}>
+            <Grid item sm={5}>
+                <ImageList cols={5} sx={{height:100}}>
                     <img id='python' src={require('../../assets/icons/python1.png')} onClick={handleOpenPopover} style={{cursor:'pointer'}}/>
                     <img id='js' src={require('../../assets/icons/javascript.png')} onClick={handleOpenPopover} style={{cursor:'pointer'}}/>
                     <img id='html' src={require('../../assets/icons/html.png')} onClick={handleOpenPopover} style={{cursor:'pointer'}} />
                     <img id='css' src={require('../../assets/icons/css3.png')} onClick={handleOpenPopover} style={{cursor:'pointer'}} />
+                    <img id='sql' src={require('../../assets/icons/sql.png')} onClick={handleOpenPopover} style={{cursor:'pointer'}} />
                 </ImageList>
             </Grid>    
             <Grid item sm={12}>
